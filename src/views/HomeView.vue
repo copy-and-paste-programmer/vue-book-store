@@ -1,10 +1,10 @@
-<script setup>
-import NavBar from "../components/partials/NavBar.vue"
-
-</script>
-
 <template>
   <div class="flex">
-    <NavBar/>
+    <SideBar/>
   </div>
 </template>
+
+<script setup>
+import SideBar from "../components/partials/SideBar.vue"
+
+</script>
