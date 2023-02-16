@@ -1,10 +1,10 @@
 <script setup>
+import NavBar from "../components/partials/NavBar.vue"
+
 </script>
 
 <template>
-  <main>
-    <div class="container">
-      hello tailwind
-    </div>
-  </main>
+  <div class="flex">
+    <NavBar/>
+  </div>
 </template>

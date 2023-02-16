@@ -6,7 +6,12 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        "primary":"#1C213E",
+        "secondary":"#262EA2"
+      }
+    },
     container:{
       center:true
     }
