@@ -1,8 +1,8 @@
 <template>
   <div class="text-white p-7 bg-primary min-h-screen">
     <h1 class="text-xl">Reader</h1>
-    <ul class="flex flex-col justify-center">
-      <RouterLink to="" class="my-2 flex items-center">
+    <ul class="flex flex-col justify-center text-white-soft">
+      <RouterLink :to="{name:'home'}" class="my-2 flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -57,3 +57,9 @@
     </ul>
   </div>
 </template>
+
+<style scoped>
+.router-link-active {
+    color: #ffffff;
+}
+</style>
