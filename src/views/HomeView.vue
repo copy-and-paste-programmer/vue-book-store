@@ -49,7 +49,7 @@
                             Browse Latest
                         </button>
                     </div>
-                    <div class="right w-6/12 absolute -right-[190px] top-[54px]">
+                    <div class="right w-6/12 relative -right-[97px] -top-[69px]">
                         <img
                             src="../../public/images/home-img.svg"
                             class="max-w-sm h-80"
