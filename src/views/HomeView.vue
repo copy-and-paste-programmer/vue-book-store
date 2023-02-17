@@ -347,9 +347,9 @@
                 <span class="px-3 text-slate-50 text-sm">1950's</span>
                 <span class="px-3 text-slate-50 text-sm">1940's</span>
             </div>
-            <div class="flex">
+            <div class="flex pb-[70px] pt-[15px]">
                 <div class="flex items-center mr-[26px]">
-                    <img src="/public/images/book1.svg" alt="" />
+                    <img src="/public/images/book1.svg" alt="" class="w-[120px]"/>
                     <div class="">
                         <h4 class="text-slate-50">The Tiny Dragon</h4>
                         <span class="text-gray-400 text-xs"
@@ -430,7 +430,7 @@
                     </div>
                 </div>
                 <div class="flex items-center mr-[26px]">
-                    <img src="/public/images/book1.svg" alt="" />
+                    <img src="/public/images/book1.svg" alt="" class="w-[120px]"/>
                     <div class="">
                         <h4 class="text-slate-50">The Tiny Dragon</h4>
                         <span class="text-gray-400 text-xs"
@@ -511,7 +511,7 @@
                     </div>
                 </div>
                 <div class="flex items-center mr-[26px]">
-                    <img src="/public/images/book1.svg" alt="" />
+                    <img src="/public/images/book1.svg" alt="" class="w-[120px]"/>
                     <div class="">
                         <h4 class="text-slate-50">The Tiny Dragon</h4>
                         <span class="text-gray-400 text-xs"
