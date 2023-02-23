@@ -7,15 +7,7 @@
                 <div class="my-3 text-4xl font-bold tracking-wider text-center">
                     <h1 href="#">Reader</h1>
                 </div>
-                <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
-                    With the power of Reader, you can now focus only on
-                    functionaries for your digital products, while leaving the
-                    UI design on us!
-                </p>
-                <p class="flex flex-col items-center justify-center mt-10 text-center">
-                    <span>Don't have an account?</span>
-                    <a href="#" class="underline">Get Started!</a>
-                </p>
+                <img src="../../public/images/people-reading-book-in-library-7368453-6006217.png" alt="">
                 <p class="mt-6 text-sm text-center text-gray-300">
                     Read our <a href="#" class="underline">terms</a> and
                     <a href="#" class="underline">conditions</a>
@@ -49,6 +41,10 @@
                             Log in
                         </button>
                     </div>
+                    <p class="flex flex-col items-center justify-center mt-10 text-center text-[#2B335B]">
+                        <span>Don't have an account?</span>
+                        <a href="#" class="underline">Get Started!</a>
+                    </p>
                 </form>
             </div>
         </div>
