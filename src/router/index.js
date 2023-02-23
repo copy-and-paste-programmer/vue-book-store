@@ -4,6 +4,7 @@ import DiscoverView from '../views/DiscoverView.vue';
 import BookView from '../views/BookView.vue';
 import WishListView from '../views/WishListView.vue';
 import SettingView from '../views/SettingView.vue';
+import Login from '../views/LoginView.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
             path: '/setting',
             name: 'setting',
             component: SettingView
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
         }
     ]
 });
