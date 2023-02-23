@@ -27,10 +27,10 @@
                             class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                     </div>
                     <div class="flex items-center space-x-2 justify-between">
-                        <div class="">
+                        <div>
                             <input type="checkbox" id="remember"
                             class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200" />
-                            <label for="remember" class="text-sm font-semibold text-gray-500">Remember me</label>
+                            <label for="remember" class="mx-1 text-sm font-semibold text-gray-500">Remember me</label>
                         </div>
                         <a href="#" class="item-end text-sm text-blue-600 hover:underline focus:text-blue-800">Forgot
                             Password?</a>
