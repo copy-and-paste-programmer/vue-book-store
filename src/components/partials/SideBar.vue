@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white p-7 bg-primary h-screen max-w-[14%] w-full sticky top-0">
+    <div class="text-white p-10 bg-primary h-screen max-w-[14%] w-full sticky top-0">
         <Typography tag="h1" content="Reader" />
         <ul class="flex flex-col justify-center text-white-soft">
             <RouterLink :to="{ name: 'home' }" class="my-5 flex items-center">

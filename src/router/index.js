@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import DiscoverView from '../views/DiscoverView.vue';
-import RecommendationsView from '../views/RecommendationsView.vue';
+import BookView from '../views/BookView.vue';
 import WishListView from '../views/WishListView.vue';
 import SettingView from '../views/SettingView.vue';
 
@@ -14,14 +14,14 @@ const router = createRouter({
             component: HomeView
         },
         {
-            path: '/discover',
+            path: '/discovers',
             name: 'discover',
             component: DiscoverView
         },
         {
-            path: '/recommendations',
-            name: 'recommendations',
-            component: RecommendationsView
+            path: '/books',
+            name: 'book',
+            component: BookView
         },
         {
             path: '/wishlist',
