@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white p-7 bg-primary min-h-screen">
+    <div class="text-white p-7 bg-primary h-screen max-w-[14%] w-full sticky top-0">
         <Typography tag="h1" content="Reader" />
         <ul class="flex flex-col justify-center text-white-soft">
             <RouterLink :to="{ name: 'home' }" class="my-5 flex items-center">
@@ -40,7 +40,7 @@
                 <Text text="Discover" />
             </RouterLink>
             <RouterLink
-                :to="{ name: 'recommendations' }"
+                :to="{ name: 'book' }"
                 class="my-5 flex items-center"
             >
                 <svg
@@ -57,7 +57,7 @@
                         d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
                     />
                 </svg>
-                <Text text="Recommendations" />
+                <Text text="Book" />
             </RouterLink>
             <RouterLink
                 :to="{ name: 'wishlist' }"
