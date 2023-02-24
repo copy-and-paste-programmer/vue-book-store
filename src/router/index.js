@@ -4,7 +4,11 @@ import DiscoverView from '../views/DiscoverView.vue';
 import BookView from '../views/BookView.vue';
 import WishListView from '../views/WishListView.vue';
 import SettingView from '../views/SettingView.vue';
+<<<<<<< HEAD
+import RegisterView from '../views/RegisterView.vue';
+=======
 import Login from '../views/LoginView.vue';
+>>>>>>> 42f168c3f875f1be942fcd1885aedf557f12bee6
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +37,11 @@ const router = createRouter({
             path: '/setting',
             name: 'setting',
             component: SettingView
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: RegisterView
         },
         {
             path: '/login',
