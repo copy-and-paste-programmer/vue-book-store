@@ -51,7 +51,6 @@
                         />
                     </div>
                     <div class="flex items-center space-x-2 justify-between">
-<<<<<<< HEAD
                         <div class="">
                             <input
                                 type="checkbox"
@@ -62,12 +61,6 @@
                                 for="remember"
                                 class="text-sm font-semibold text-gray-500"
                             >Remember me</label>
-=======
-                        <div>
-                            <input type="checkbox" id="remember"
-                            class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200" />
-                            <label for="remember" class="mx-1 text-sm font-semibold text-gray-500">Remember me</label>
->>>>>>> 0ee971346f7d688cfa27f4d5585acb63f5ffb038
                         </div>
                         <a
                             href="#"
