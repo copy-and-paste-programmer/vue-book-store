@@ -92,11 +92,12 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { useLogin } from '../http';
+import { useLogin } from '../http/index';
 
 const emailRef = ref('');
 const passwordRef = ref('');
 const router = useRouter();
+const errMsg = ref([]);
 
 const onLogin = async () => {
     const payload = { email: emailRef.value, password: passwordRef.value }
@@ -105,7 +106,10 @@ const onLogin = async () => {
         router.push({ name: 'home' })
         return;
     }
-
+    else {
+        errMsg.value = error;
+        console.log(errMsg.value);
+    }
 }
 </script>
 

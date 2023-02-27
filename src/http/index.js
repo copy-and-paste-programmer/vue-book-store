@@ -1,5 +1,5 @@
 import { reactive, toRefs } from "vue"
-import axios from "./axios.js"
+import axios from "../http/axios"
 
 export const useFetch = async (url, config = {}) => {
 
@@ -46,24 +46,24 @@ export const useLogin = async (url, payload, config = {}) => {
                 ...config
             })
 
-            const config = {
+            const cookie = {
                 'name': 'access_token',
-                'value': `${data.token_type} ${data.access_token}`,
-                'expireTimes': `${data.expires_in / (3600 * 24)}d`,
+                'value': `${res.data.token_type} ${res.data.access_token}`,
+                'expireTimes': `${res.data.expires_in / (3600 * 24)}d`,
             }
 
-            $cookies.set(...Object.values(config));
-            localStorage.setItem('auth_user', JSON.stringify(data.user))
+            $cookies.set(...Object.values(cookie));
+            localStorage.setItem('auth_user', JSON.stringify(res.data.user))
             state.data = res.data
 
         } catch (error) {
             state.error = error.response;
+            console.log(state.error);
         } finally {
-            data.isLoading = false;
+            state.isLoading = false;
         }
     }
 
     await login();
-
     return toRefs(state);
 }
