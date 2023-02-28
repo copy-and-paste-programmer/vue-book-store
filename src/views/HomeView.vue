@@ -42,7 +42,7 @@
                                 </p>
                                 <button
                                     type="button"
-                                    class="text-white bg-[#1C213E] focus:outline-none focus:ring-4 focus:ring-gray-300 font-small rounded-full text-sm px-6 py-1 mr-2 mb-2 dark:bg-[#1C213E] dark:border-[#1C213E]"
+                                    class="text-white bg-[#1C213E] focus:outline-none focus:ring-4 font-small rounded-full text-sm px-6 py-1 mr-2 mb-2 dark:bg-[#1C213E] dark:border-[#1C213E]"
                                 >
                                     Browse Latest
                                 </button>
