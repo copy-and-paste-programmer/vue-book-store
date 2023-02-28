@@ -51,16 +51,16 @@ const router = createRouter({
             component: Login,
             beforeEnter: (to, from, next) => {
                 const auth = useAuthenticationStore();
-                if (to.query.redirect || to.query.logout || !auth.isLogin) {
+                if (!auth.isLogin) {
                     next();
                 }
-                else if (auth.isLogin) next({ name: 'home' })
+                else next({ name: 'home' })
             }
         }
     ]
 });
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach((to, from, next) => {
     const auth = useAuthenticationStore();
     if (to.meta.requiredAuth && !auth.isLogin && to.name !== 'login') {
         next({
