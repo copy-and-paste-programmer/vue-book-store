@@ -101,7 +101,7 @@ const emailRef = ref('');
 const passwordRef = ref('');
 const router = useRouter();
 const auth = useAuthenticationStore();
-const { pending, login, error } = storeToRefs(auth)
+const { pending, error } = storeToRefs(auth)
 
 const onLogin = async () => {
     const payload = { email: emailRef.value, password: passwordRef.value }

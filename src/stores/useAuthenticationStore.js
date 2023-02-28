@@ -44,7 +44,7 @@ const useAuthenticationStore = defineStore('auth_user', {
                 }
                 this.accessToken = cookie.value
                 $cookies.set(...Object.values(cookie));
-                const store = useLocalStorage('auth_user');
+
                 store.setItem(user)
                 
 

@@ -52,7 +52,6 @@ const router = createRouter({
             beforeEnter: (to, from, next) => {
                 const auth = useAuthenticationStore();
                 if (to.query.redirect || to.query.logout || !auth.isLogin) {
-                    auth.logout();
                     next();
                 }
                 else if (auth.isLogin) next({ name: 'home' })
