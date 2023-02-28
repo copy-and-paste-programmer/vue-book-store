@@ -20,32 +20,32 @@
                 <form class="flex flex-col space-y-5" method="POST" @submit.prevent="register">
                     <div class="flex flex-col space-y-1">
                         <input type="text" name="name" autofocus placeholder="Name" v-model="name"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.name" class="text-[#FD0000]">{{ errMsg.name[0] }}</span>
                     </div>
                     <div class="flex flex-col space-y-1">
                         <input type="text" name="email" autofocus placeholder="Email" v-model="email"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.email" class="text-[#FD0000]">{{ errMsg.email[0] }}</span>
                     </div>
                     <div class="flex flex-col space-y-1">
                         <input type="password" name="password" placeholder="Password" v-model="password"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.password" class="text-[#FD0000]">{{ errMsg.password[0] }}</span>
                     </div>
                     <div class="flex flex-col space-y-1">
                         <input type="password" name="confirm_password" autofocus placeholder="Confirm Password" v-model="confirm_password"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.confirm_password" class="text-[#FD0000]">{{ errMsg.confirm_password[0] }}</span>
                     </div>
                     <div class="flex flex-col space-y-1">
                         <input type="number" name="phone" autofocus placeholder="Phone" v-model="phone"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.phone_no" class="text-[#FD0000]">{{ errMsg.phone_no[0] }}</span>
                     </div>
                     <div class="flex flex-col space-y-1">
                         <textarea type="text" name="address" autofocus placeholder="Address" v-model="address"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            class="px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                         <span v-if="errMsg.address" class="text-[#FD0000]">{{ errMsg.address[0] }}</span>
                     </div>
                     <div>

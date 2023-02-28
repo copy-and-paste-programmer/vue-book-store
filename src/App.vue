@@ -9,10 +9,10 @@ import { RouterView } from 'vue-router';
 <style>
 
 .Toastify__toast-container {
-    --toastify-icon-color-success: #2B335B;
+    --toastify-icon-color-success: #6285D9;
 }
 
 .Toastify__progress-bar--success  {
-    background: #2B335B;
+    background: #6285D9;
 }
 </style>

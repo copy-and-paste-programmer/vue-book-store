@@ -38,7 +38,7 @@
                             autofocus
                             placeholder="Email"
                             v-model="emailRef"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                            class="px-4 py-2 border border-gray-300 rounded focus:ring-blue-200"
                         />
                     </div>
                     <div class="flex flex-col space-y-1">
@@ -47,7 +47,7 @@
                             id="password"
                             placeholder="Password"
                             v-model="passwordRef"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                            class="px-4 py-2 border border-gray-300 rounded focus:ring-blue-200"
                         />
                     </div>
                     <div class="flex items-center space-x-2 justify-between">
