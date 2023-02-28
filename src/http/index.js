@@ -29,41 +29,36 @@ export const useFetch = async (url, config = {}) => {
     return toRefs(state);
 }
 
-export const useLogin = async (url, payload, config = {}) => {
+// export const useLogin = async (url, payload, config = {}) => {
 
-    const state = reactive({
-        isLoading: true,
-        error: null,
-        data: null,
-    })
+//     const state = reactive({
+//         isLoading: true,
+//         error: null,
+//         data: null,
+//     })
 
-    const login = async () => {
-        try {
-            const res = await axios({
-                url,
-                data: payload,
-                method: 'POST',
-                ...config
-            })
+//     const login = async () => {
+//         try {
+//             const res = await axios({
+//                 url,
+//                 data: payload,
+//                 method: 'POST',
+//                 ...config
+//             })
 
-            const cookie = {
-                'name': 'access_token',
-                'value': `${res.data.token_type} ${res.data.access_token}`,
-                'expireTimes': `${res.data.expires_in / (3600 * 24)}d`,
-            }
+//             const auth = useAuthenticationStore();
+//             auth.login(res.data)
+            
+//             state.data = res.data
 
-            $cookies.set(...Object.values(cookie));
-            localStorage.setItem('auth_user', JSON.stringify(res.data.user))
-            state.data = res.data
+//         } catch (error) {
+//             state.error = error.response;
+//             console.log(error)
+//         } finally {
+//             state.isLoading = false;
+//         }
+//     }
 
-        } catch (error) {
-            state.error = error.response;
-            console.log(state.error);
-        } finally {
-            state.isLoading = false;
-        }
-    }
-
-    await login();
-    return toRefs(state);
-}
+//     await login();
+//     return toRefs(state);
+// }

@@ -70,8 +70,9 @@
                     </div>
                     <div>
                         <button
+                            :disabled="pending"
                             type="submit"
-                            class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-[#2B335B] rounded-md shadow hover:bg-[#9098D8] focus:outline-none focus:ring-[#9098D8] focus:ring-4"
+                            class=" disabled:bg-[#9098D8] w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-[#2B335B] rounded-md shadow hover:bg-[#9098D8] focus:outline-none focus:ring-[#9098D8] focus:ring-4"
                         >
                             Log in
                         </button>
@@ -90,25 +91,25 @@
 </template>
 
 <script setup>
+import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { useLogin } from '../http/index';
+import { toast } from 'vue3-toastify';
+import useAuthenticationStore from '../stores/useAuthenticationStore';
 
 const emailRef = ref('');
 const passwordRef = ref('');
 const router = useRouter();
-const errMsg = ref([]);
+const auth = useAuthenticationStore();
+const { pending, login, error } = storeToRefs(auth)
 
 const onLogin = async () => {
     const payload = { email: emailRef.value, password: passwordRef.value }
-    const { data, isLoading, error } = await useLogin('login', payload)
-    if (!error) {
+    await auth.login(payload)
+    if (!error.value) {
+        toast.success('Login Successfully')
         router.push({ name: 'home' })
         return;
-    }
-    else {
-        errMsg.value = error;
-        console.log(errMsg.value);
     }
 }
 </script>

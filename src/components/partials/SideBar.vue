@@ -1,8 +1,14 @@
 <template>
     <div class="text-white p-10 bg-primary h-screen max-w-[14%] w-full sticky top-0">
-        <Typography tag="h1" content="Reader" />
+        <Typography
+            tag="h1"
+            content="Reader"
+        />
         <ul class="flex flex-col justify-center text-white-soft">
-            <RouterLink :to="{ name: 'home' }" class="my-5 flex items-center">
+            <RouterLink
+                :to="{ name: 'home' }"
+                class="my-5 flex items-center"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -102,19 +108,48 @@
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                 </svg>
-                <Text text="setting" />
+                <Text text="Setting" />
             </RouterLink>
+            <li
+                class="my-5 flex items-center cursor-pointer"
+                @click="logout"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 mr-3"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                    />
+                </svg>
+                <Text text="Logout" />
+            </li>
         </ul>
     </div>
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
 import Text from '../../atoms/Text.vue'
 import Typography from '../../atoms/Typography.vue';
+import useAuthenticationStore from '../../stores/useAuthenticationStore';
+const auth = useAuthenticationStore();
+const router = useRouter();
+
+const logout = async () => {
+    await auth.logout()
+    router.push({ name: 'login' })
+    return;
+}
 </script>
 
 <style scoped>
 .router-link-active {
     color: #ffffff;
-}
-</style>
+}</style>
