@@ -1,6 +1,7 @@
 <template>
     <div class="flex">
         <SideBar />
+        <SkeletonBook></SkeletonBook>
         <div class="p-[60px]">
             <div v-if="Object.keys(book.data).length">
                 <div class="grid grid-cols-3 gap-8 pb-[50px]">
@@ -396,6 +397,7 @@
 import { reactive, onBeforeMount } from 'vue';
 import { onBeforeRouteUpdate } from 'vue-router';
 import SideBar from '../components/partials/SideBar.vue';
+import SkeletonBook from '../components/SkeletonBook.vue';
 import { useFetch } from '../http';
 
 const book = reactive({
