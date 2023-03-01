@@ -1,13 +1,9 @@
 <template>
-    <div
-        class="flex items-center min-h-screen p-4 bg-primary lg:justify-center"
-    >
+    <div class="flex items-center min-h-screen p-4 bg-primary lg:justify-center">
         <div
-            class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
-        >
+            class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
             <div
-                class="p-7 py-6 text-white bg-[#2B335B] md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
-            >
+                class="p-7 py-6 text-white bg-[#2B335B] md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
                 <div class="my-3 text-4xl font-bold tracking-wider text-center">
                     <h1 href="#">Reader</h1>
                 </div>
@@ -16,8 +12,14 @@
                     alt=""
                 />
                 <p class="mt-6 text-sm text-center text-gray-300">
-                    Read our <a href="#" class="underline">terms</a> and
-                    <a href="#" class="underline">conditions</a>
+                    Read our <a
+                        href="#"
+                        class="underline"
+                    >terms</a> and
+                    <a
+                        href="#"
+                        class="underline"
+                    >conditions</a>
                 </p>
             </div>
             <div class="p-7 bg-white md:flex-1">
@@ -60,14 +62,12 @@
                             <label
                                 for="remember"
                                 class="text-sm font-semibold text-gray-500"
-                                >Remember me</label
-                            >
+                            >Remember me</label>
                         </div>
                         <a
                             href="#"
                             class="item-end text-sm text-blue-600 hover:underline focus:text-blue-800"
-                            >Forgot Password?</a
-                        >
+                        >Forgot Password?</a>
                     </div>
                     <div>
                         <button
@@ -104,11 +104,12 @@
                             Loading...
                         </button>
                     </div>
-                    <p
-                        class="flex flex-col items-center justify-center mt-10 text-center text-[#2B335B]"
-                    >
+                    <p class="flex flex-col items-center justify-center mt-10 text-center text-[#2B335B]">
                         <span>Don't have an account?</span>
-                        <a href="#" class="underline">Get Started!</a>
+                        <a
+                            href="#"
+                            class="underline"
+                        >Get Started!</a>
                     </p>
                 </form>
             </div>

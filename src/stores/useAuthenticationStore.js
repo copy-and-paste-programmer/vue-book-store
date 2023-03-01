@@ -11,8 +11,8 @@ const useAuthenticationStore = defineStore('auth_user', {
         error: null
     }),
     getters: {
-        isLogin(state) { 
-            return state.user ? true : false 
+        isLogin(state) {
+            return state.user ? true : false
         }
     },
     actions: {
@@ -27,14 +27,14 @@ const useAuthenticationStore = defineStore('auth_user', {
             this.pending = true
             this.error = null;
             try {
-               const res = await axios({
+                const res = await axios({
                     url: 'login',
                     method: 'POST',
                     data: payload
                 })
-                
+
                 const { user, access_token, token_type, expires_in } = res.data;
-                
+
                 this.user = user;
 
                 const cookie = {
@@ -46,7 +46,7 @@ const useAuthenticationStore = defineStore('auth_user', {
                 $cookies.set(...Object.values(cookie));
 
                 store.setItem(user)
-                
+
 
             } catch (error) {
                 this.error = error
